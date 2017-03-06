@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{fragments/layout :: layout (~{::body},'home')}">
+
+<body>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title" th:text="#{welcome}"></h3>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-md-12">
+					<h4>This application uses these technologies:</h4>
+					<ul>
+						<li>Spring MVC</li>
+						<li>Thymeleaf</li>
+						<li>Hibernate</li>
+						<li>H2 in memory database</li>
+						<li>Spring Data</li>
+						<li>Spring Security (Not yet...))</li>
+						<li>Apache Tomcat</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
