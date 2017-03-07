@@ -13,5 +13,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/", "/customers", "/customer/details/*", "/customer/edit/*", "/customer/new").permitAll()
 				.anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll().and().logout()
 				.permitAll();
+		
+		 httpSecurity.csrf().disable();
+	     httpSecurity.headers().frameOptions().disable();
 	}
 }
