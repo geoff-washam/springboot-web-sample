@@ -1,17 +1,17 @@
-
-<!-- Based off of the Spring Framework Petclinic sample application. -->
-
 <html>
 <body>
   <form>
-    <th:block th:fragment="input (label, name, type, required)">
+    <th:block th:fragment="input (label, name)">
       <div th:with="valid=${!#fields.hasErrors(name)}"
         th:class="${'form-group' + (valid ? '' : ' has-error')}"
         class="form-group">
         <label class="col-sm-2 control-label" th:text="${label}">Label</label>
         <div class="col-sm-10">
-          <input class="form-control" th:type="${type}"
-            th:field="*{__${name}__}" th:required="${required}" />
+          <input class="form-control" type="text"
+            th:field="*{__${name}__}" />
+          <span th:if="${valid}"
+            class="glyphicon glyphicon-ok form-control-feedback"
+            aria-hidden="true"></span>
           <th:block th:if="${!valid}">
             <span
               class="glyphicon glyphicon-remove form-control-feedback"
@@ -21,6 +21,7 @@
         </div>
       </div>
     </th:block>
+    
   </form>
 </body>
 </html>

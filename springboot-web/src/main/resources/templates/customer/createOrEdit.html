@@ -6,15 +6,15 @@
 		<form class="form-horizontal" th:object="${customer}" method="post">
 
 			<input
-				th:replace="~{fragments/inputField :: input ('First Name', 'firstName', 'text', 'true')}" />
+				th:replace="~{fragments/inputField :: input ('First Name', 'firstName')}" />
 			<input
-				th:replace="~{fragments/inputField :: input ('Last Name', 'lastName', 'text', 'true')}" />
+				th:replace="~{fragments/inputField :: input ('Last Name', 'lastName')}" />
 			<input
-				th:replace="~{fragments/inputField :: input ('Address', 'address', 'text', 'true')}" />
+				th:replace="~{fragments/inputField :: input ('Address', 'address')}" />
 			<input
-				th:replace="~{fragments/inputField :: input ('City', 'city', 'text', 'true')}" />
+				th:replace="~{fragments/inputField :: input ('City', 'city')}" />
 			<input
-				th:replace="~{fragments/inputField :: input ('Telephone', 'telephone', 'text', 'true')}" />
+				th:replace="~{fragments/inputField :: input ('Telephone', 'telephone')}" />
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
 					<button
@@ -23,6 +23,7 @@
 						Customer</button>
 				</div>
 			</div>
+			
 		</form>
 	</div>
 </body>
