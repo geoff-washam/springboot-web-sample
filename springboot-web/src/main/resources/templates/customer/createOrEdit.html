@@ -2,7 +2,6 @@
 	th:replace="~{fragments/layout :: layout (~{::body},'customers')}">
 
 <body>
-
 	<div>
 		<form class="form-horizontal" th:object="${customer}" method="post">
 
@@ -16,10 +15,15 @@
 				th:replace="~{fragments/inputField :: input ('City', 'city', 'text', 'true')}" />
 			<input
 				th:replace="~{fragments/inputField :: input ('Telephone', 'telephone', 'text', 'true')}" />
-
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button
+						th:with="text=${customer['new']} ? 'Add Customer' : 'Update Customer'"
+						class="btn btn-default" type="submit" th:text="${text}">Add
+						Customer</button>
+				</div>
+			</div>
 		</form>
-
 	</div>
-
 </body>
 </html>
